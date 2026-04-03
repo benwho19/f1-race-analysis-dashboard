@@ -337,16 +337,19 @@ with tab_overview:
 
         factor_df = df_joined.copy()
         factor_df["overtakes"] = factor_df["total_overtakes_est"]
-
+            
         if "event_name" in factor_df.columns:
-            fastest_lap_winners = (
-                factor_df.groupby(["season", "round"])["relative_pace"]
-                .idxmin()
-                .dropna()
-                .tolist()
-            )
             factor_df["fastest_lap_proxy"] = 0
-            factor_df.loc[fastest_lap_winners, "fastest_lap_proxy"] = 1
+
+            valid_pace_df = factor_df.dropna(subset=["relative_pace"]).copy()
+
+            if not valid_pace_df.empty:
+                fastest_lap_winners = (
+                    valid_pace_df.groupby(["season", "round"])["relative_pace"]
+                    .idxmin()
+                    .tolist()
+                )
+                factor_df.loc[fastest_lap_winners, "fastest_lap_proxy"] = 1
         else:
             factor_df["fastest_lap_proxy"] = 0
 
