@@ -1,7 +1,9 @@
 # 🏎️ F1 Race Outcome Analysis Dashboard
 
-An interactive Streamlit dashboard analyzing what drives race outcomes in Formula 1.
+An interactive dashboard analyzing what drives race outcomes in Formula 1.
 This project explores how qualifying position, race pace, and in-race performance relate to finishing position, and allows users to compare drivers, teams, and tracks across seasons.
+
+This dashboard is designed for fans, analysts, and anyone interested in understanding the key drivers of race performance in Formula 1.
 
 ---
 
@@ -11,7 +13,7 @@ https://formula1-analysis-dashboard.streamlit.app/
 
 ---
 
-## Overview
+## General Overview
 
 What determines success in a Formula 1 race?
 
@@ -33,29 +35,49 @@ This project analyzes race results, qualifying data, and performance metrics to 
 
 ---
 
-## Dashboard Features
+## Dashboard Features & Preview
 
-### Overview
+### Overview tab
 
+#### Features
 * Key performance factors correlated with race outcomes
 * Relationship between qualifying position and finishing position
 * Team-level comparisons of qualifying vs. race performance
 
-### Drivers
+#### Preview of Overview tab
+![Overview](assets/overview.png)
+*Key drivers of race outcomes using correlation analysis and direction-aligned metrics.*
 
+### Drivers tab
+
+#### Features
 * Drivers who consistently gain positions on race day
 * Distribution of positions gained by driver
 * Identification of drivers combining **pace vs. racecraft**
 
-### Teams
+#### Preview of Drivers tab
+![Drivers](assets/drivers.png)
+*Identifies drivers who combine race pace and racecraft using quadrant analysis.*
 
+### Teams tab
+
+#### Features
 * Team-level racecraft (positions gained)
 * Distribution of race-day performance
 * Team quadrant: **pace vs. racecraft**
 
-### Tracks
+#### Preview of Teams tab
+![Teams](assets/teams.png)
+*Compares team performance using pace vs racecraft and qualifying vs race results.*
 
+### Tracks tab
+
+#### Features
 * Track-level variation in overtaking and importance of qualifying position
+
+#### Preview of Tracks tab
+![Tracks](assets/tracks.png)
+*Ranks tracks by how strongly qualifying position predicts race results, highlighting circuits where starting position matters most.*
 
 ---
 
